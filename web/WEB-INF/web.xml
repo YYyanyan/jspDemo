@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+<servlet>
+    <!-- 对应mapping中某一个servlet的内部名 -->
+    <servlet-name>name1</servlet-name>
+    <!-- 当收到请求时，要调用的Java类的相对路径（相对classes文件） -->
+    <servlet-class>YearQueryServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <!-- 为了方便部署，给这个servlet取一个内部名 -->
+    <servlet-name>name1</servlet-name>
+    <!-- 在index.jsp页面中对应的某表单action属性 -->
+    <url-pattern>/query.do</url-pattern>
+</servlet-mapping>
+
+</web-app>
